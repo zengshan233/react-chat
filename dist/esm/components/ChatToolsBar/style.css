@@ -1,0 +1,35 @@
+.chat_tool_bar_content {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.chat_tool_bar_content .tool_icon {
+  height: 20px;
+  width: 20px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+.chat_tool_bar_content .tool_icon:hover {
+  cursor: pointer;
+}
+.chat_tool_bar_content .emoji {
+  background-image: url('../../image/emoji_black.png');
+}
+.chat_tool_bar_content .emoji:hover {
+  background-image: url('../../image/emoji_light.png');
+}
+.chat_tool_bar_content .file {
+  background-image: url('../../image/file_black.png');
+}
+.chat_tool_bar_content .file:hover {
+  background-image: url('../../image/file_light.png');
+}
+.chat_tool_bar_content .pic {
+  background-image: url('../../image/pic_black.png');
+}
+.chat_tool_bar_content .pic:hover {
+  background-image: url('../../image/pic_light.png');
+}
