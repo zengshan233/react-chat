@@ -1,4 +1,4 @@
-.contact_item_content {
+.content {
   background-color: white;
   min-height: 60px;
   width: 100%;
@@ -10,44 +10,44 @@
   position: relative;
   transition: all 0.3s;
 }
-.contact_item_content:hover {
+.content:hover {
   cursor: pointer;
 }
-.contact_item_content .icon {
+.icon {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   overflow: hidden;
 }
-.contact_item_content .info_area {
+.info_area {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
   flex: 1;
 }
-.contact_item_content .nickname {
+.nickname {
   font-size: 13px;
   color: #333;
 }
-.contact_item_content .desc {
+.desc {
   font-size: 11px;
   color: #666;
 }
-.contact_item_content .ellipsis {
+.ellipsis {
   max-width: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.contact_item_content.selected {
+.selected {
   box-shadow: 0px 0px 20px rgb(180, 180, 180);
   transform: scale(1.05);
   z-index: 1000;
 }
-.contact_item_content.selected:after {
+.selected:after {
   display: none;
 }
-.contact_item_content .bottom_border:after {
+.bottom_border:after {
   content: '';
   width: 90%;
   height: 1px;
@@ -57,7 +57,7 @@
   left: 50%;
   margin-left: -45%;
 }
-.contact_item_content .date_area {
+.date_area {
   font-size: 12px;
   color: #666;
 }

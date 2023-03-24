@@ -1,6 +1,6 @@
 import React, { ChangeEventHandler, Component, useRef } from 'react'
 import { IImgPopover } from '../../types'
-import  './style.css'
+import style from './style.module.css'
 
 export default function ImgPopover({ onImage }: IImgPopover) {
   const fileSelector = useRef<HTMLInputElement>(null)
@@ -16,7 +16,7 @@ export default function ImgPopover({ onImage }: IImgPopover) {
     onImage(files)
   }
   return (
-    <div className='img_content' onClick={selectImg}>
+    <div className={style.content} onClick={selectImg}>
       <input type="file" accept="image/*" ref={fileSelector} onChange={fileHandle} />
     </div>
     )

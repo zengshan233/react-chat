@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style.css";
+import style from "./style.module.css";
 import MsgBubble from "../MsgBubble";
 import dayjs from 'dayjs';
 export default function MsgItem(_ref) {
@@ -7,25 +7,25 @@ export default function MsgItem(_ref) {
     me = _ref.me;
   var isMe = data.user.id === me.id;
   return /*#__PURE__*/React.createElement("div", {
-    className: "msg_item_content",
+    className: style.content,
     style: {
       flexDirection: isMe ? 'row-reverse' : 'row'
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "avatar"
+    className: style.avatar
   }, /*#__PURE__*/React.createElement("img", {
     src: data.user.avatar
   })), /*#__PURE__*/React.createElement("div", {
-    className: "text_area",
+    className: style.text_area,
     style: {
       alignItems: isMe ? 'flex-end' : 'flex-start'
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "comment_area"
+    className: style.comment_area
   }, /*#__PURE__*/React.createElement("span", {
-    className: "nickname_text"
+    className: style.nickname_text
   }, data.user.nickname), /*#__PURE__*/React.createElement("span", {
-    className: "date_text"
+    className: style.date_text
   }, dayjs.unix(data.date).format('MM-DD HH:mm:ss'))), /*#__PURE__*/React.createElement(MsgBubble, {
     isMe: isMe,
     data: data.message

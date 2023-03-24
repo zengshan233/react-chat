@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import style from './style.module.css'
 import MsgBubble from '../MsgBubble'
 import dayjs from 'dayjs'
 import { IMsgItem } from '../../types'
@@ -9,18 +9,18 @@ export default function MsgItem({ data, me }: IMsgItem) {
 
   return (
     <div
-      className='msg_item_content'
+      className={style.content}
       style={{ flexDirection: isMe ? 'row-reverse' : 'row' }}>
-      <div className='avatar'>
+      <div className={style.avatar}>
         <img src={data.user.avatar} />
       </div>
-      <div className='text_area' style={{ alignItems: isMe ? 'flex-end' : 'flex-start' }}>
-        <div className='comment_area'>
-          <span className='nickname_text'>{data.user.nickname}</span>
-          <span className='date_text'>{dayjs.unix(data.date).format('MM-DD HH:mm:ss')}</span>
+      <div className={style.text_area} style={{ alignItems: isMe ? 'flex-end' : 'flex-start' }}>
+        <div className={style.comment_area}>
+          <span className={style.nickname_text}>{data.user.nickname}</span>
+          <span className={style.date_text}>{dayjs.unix(data.date).format('MM-DD HH:mm:ss')}</span>
         </div>
         <MsgBubble isMe={isMe} data={data.message} />
       </div>
     </div>
-  )
+    )
 }

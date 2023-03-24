@@ -5,7 +5,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 import React, { useEffect, useState } from 'react';
-import "./style.css";
+import style from "./style.module.css";
+import cns from "../../utils/toClass";
 var emojiList = ['😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇', '🙂', '🙃', '😉', '😌', '😍', '🥰', '😘', '😗', '😙', '😚', '😋', '😛', '😝', '😜', '🤪', '🤨', '🧐', '🤓', '😎', '🤩', '🥳', '😏', '😒', '😞', '😔', '😟', '😕', '🙁', '😣', '😖', '😫', '😩', '🥺', '😢', '😭', '😤', '😠', '😡', '🤬', '🤯', '😳', '🥵', '🥶', '😱', '😨', '😰', '😥', '😓', '🤗', '🤔', '🤭', '🤫', '🤥', '😶', '😐', '😑', '😬', '🙄', '😯', '😦', '😧', '😮', '😲', '🥱', '😴', '🤤', '😪', '😵', '🤐', '🥴', '🤢', '🤮', '🤧', '😷', '🤒', '🤕'];
 export default function EmojiPopover(_ref) {
   var onSelect = _ref.onSelect;
@@ -29,21 +30,21 @@ export default function EmojiPopover(_ref) {
     });
   }, []);
   return /*#__PURE__*/React.createElement("div", {
-    className: "emoji_content"
+    className: style.content
   }, /*#__PURE__*/React.createElement("div", {
-    className: "emoji_wrapper",
+    className: style.emoji_wrapper,
     style: {
       display: visible ? 'block' : 'none'
     }
   }, emojiList.map(function (emoji) {
     return /*#__PURE__*/React.createElement("span", {
       onClick: iconClickHandle.bind(null, emoji),
-      className: "emoji_item",
+      className: style.emoji_item,
       datatype: emoji,
       key: emoji
     }, emoji);
   })), /*#__PURE__*/React.createElement("div", {
-    className: "tool_icon emoji",
+    className: cns([style.tool_icon, style.emoji]),
     datatype: "emoji"
   }));
 }

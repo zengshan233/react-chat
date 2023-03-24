@@ -27,7 +27,6 @@ export default function DemoChat() {
     onEarlier: function onEarlier() {
       return console.log('EarlierEarlier');
     },
-    onImage: function onImage() {},
     style: {
       width: 600,
       height: 500,

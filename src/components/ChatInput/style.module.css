@@ -1,0 +1,50 @@
+.content {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80px;
+  padding: 0 30px;
+  /* box-shadow: 0px -5px 10px -5px rgba(0, 0, 0, 0.2); */
+}
+.input_area {
+  flex: 1;
+  padding: 10px;
+  padding-left: 0;
+  font-size: 13px;
+  letter-spacing: 2px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+.input_area::placeholder {
+  color: #999;
+}
+.but_area {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #98b0b2;
+  position: relative;
+  cursor: pointer;
+}
+.but_area>svg{
+  width: 28px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.but {
+  color: white;
+  background-color: #2ba245;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+.but:active {
+  background-color: #1aad19;
+}
+.but:disabled {
+  background-color: #ddd;
+}

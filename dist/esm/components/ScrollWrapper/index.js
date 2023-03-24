@@ -5,7 +5,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import "./style.css";
+import cns from "../../utils/toClass";
+import styles from "./style.module.css";
 var ScrollWrapper = function ScrollWrapper(Comp) {
   return function (props) {
     var scrollView = useRef(null);
@@ -86,11 +87,11 @@ var ScrollWrapper = function ScrollWrapper(Comp) {
       }
       if (showScrollBar !== true) return;
       if (scrollT <= 0) {
-        setShadowStyle('shadow_bottom');
+        setShadowStyle(styles.shadow_bottom);
       } else if (scrollT >= scrollH - viewPortH) {
-        setShadowStyle('shadow_top');
+        setShadowStyle(styles.shadow_top);
       } else {
-        setShadowStyle('shadow_vertical');
+        setShadowStyle(styles.shadow_vertical);
       }
     }, [scrollT]);
     useEffect(function () {
@@ -107,30 +108,28 @@ var ScrollWrapper = function ScrollWrapper(Comp) {
         setScrollT(scrollH - viewPortH);
       }
     }, [scrollR]);
-    return /*#__PURE__*/React.createElement("div", {
-      className: "scroll_wrapper"
-    }, /*#__PURE__*/React.createElement("section", {
+    return /*#__PURE__*/React.createElement("section", {
       style: props.style,
-      className: "wrapper_content ".concat(shadowStyle)
+      className: cns([styles.wrapper_content, shadowStyle])
     }, /*#__PURE__*/React.createElement("div", {
-      className: "list_block",
+      className: styles.list_block,
       ref: scrollView,
       onScroll: scrollHandle
     }, /*#__PURE__*/React.createElement(Comp, props)), /*#__PURE__*/React.createElement("aside", {
-      className: "scroll_bar_block",
+      className: cns([styles.scroll_bar_block]),
       style: {
         width: showScrollBar ? 8 : 0
       }
     }, /*#__PURE__*/React.createElement("span", {
       ref: thumb,
-      className: "scroll_thumb",
+      className: cns([styles.scroll_thumb]),
       onMouseDown: mouseDownHandle,
       onMouseMove: mouseMovingHandle,
       style: {
         height: thumbHeight(),
         transform: "translateY(".concat(transH(), "px)")
       }
-    }))));
+    })));
   };
 };
 export default ScrollWrapper;

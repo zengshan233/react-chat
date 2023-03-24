@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import "./style.css";
+import style from "./style.module.css";
 export default function ImgPopover(_ref) {
   var onImage = _ref.onImage;
   var fileSelector = useRef(null);
@@ -13,7 +13,7 @@ export default function ImgPopover(_ref) {
     onImage(files);
   };
   return /*#__PURE__*/React.createElement("div", {
-    className: "img_content",
+    className: style.content,
     onClick: selectImg
   }, /*#__PURE__*/React.createElement("input", {
     type: "file",

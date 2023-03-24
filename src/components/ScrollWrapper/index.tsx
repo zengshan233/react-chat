@@ -5,11 +5,12 @@ import React, {
   useState
 } from 'react'
 import { IScrollWrapper } from '../../types'
-import './style.css'
+import cns from '../../utils/toClass'
+import styles from './style.module.css'
 
 type HOC<InjectedProps, OwnProps> = <P>(
   Component: React.ComponentType<P & InjectedProps>
-) => React.ComponentType<P & OwnProps>
+  ) => React.ComponentType<P & OwnProps>
 
 const ScrollWrapper: HOC<{}, IScrollWrapper> = (Comp) => (props) => {
   const scrollView = useRef<HTMLDivElement>(null)
@@ -79,11 +80,11 @@ const ScrollWrapper: HOC<{}, IScrollWrapper> = (Comp) => (props) => {
     if (showScrollBar !== true) return
 
     if (scrollT <= 0) {
-      setShadowStyle('shadow_bottom')
+      setShadowStyle(styles.shadow_bottom)
     } else if (scrollT >= scrollH - viewPortH) {
-      setShadowStyle('shadow_top')
+      setShadowStyle(styles.shadow_top)
     } else {
-      setShadowStyle('shadow_vertical')
+      setShadowStyle(styles.shadow_vertical)
     }
   }, [scrollT])
 
@@ -105,27 +106,24 @@ const ScrollWrapper: HOC<{}, IScrollWrapper> = (Comp) => (props) => {
   }, [scrollR])
 
   return (
-    <div className="scroll_wrapper">
-      <section style={props.style} className={`wrapper_content ${shadowStyle}`}>
-        <div className='list_block' ref={scrollView} onScroll={scrollHandle}>
-          <Comp {...props} />
-        </div>
-        <aside className='scroll_bar_block' style={{ width: showScrollBar ? 8 : 0 }}>
-          <span
-            ref={thumb}
-            className='scroll_thumb'
-            onMouseDown={mouseDownHandle}
-            onMouseMove={mouseMovingHandle}
-            style={{
-              height: thumbHeight(),
-              transform: `translateY(${transH()}px)`
-            }}
-          />
-        </aside>
-      </section>
-    </div>
-
-  )
+    <section style={props.style} className={cns([styles.wrapper_content, shadowStyle])}>
+      <div className={styles.list_block} ref={scrollView} onScroll={scrollHandle}>
+        <Comp {...props} />
+      </div>
+      <aside className={cns([styles.scroll_bar_block])} style={{ width: showScrollBar ? 8 : 0 }}>
+        <span
+          ref={thumb}
+          className={cns([styles.scroll_thumb])}
+          onMouseDown={mouseDownHandle}
+          onMouseMove={mouseMovingHandle}
+          style={{
+            height: thumbHeight(),
+            transform: `translateY(${transH()}px)`
+        }}
+        />
+      </aside>
+    </section>
+    )
 }
 
 export default ScrollWrapper

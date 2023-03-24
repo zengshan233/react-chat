@@ -1,4 +1,3 @@
-import './style.css';
 import { IContactItem } from '../../types';
 declare function ContactItem(props: IContactItem): JSX.Element;
 declare namespace ContactItem {

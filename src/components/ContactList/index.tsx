@@ -1,5 +1,5 @@
 import React, { Component, ReactNode, UIEventHandler, useState } from 'react'
-import  './style.css'
+import style from './style.module.css'
 import ScrollWrapper from '../ScrollWrapper'
 import ContactItem from '../ContactItem'
 import {IContact, IContactList } from '../../types'
@@ -13,7 +13,7 @@ const ContactList = (props: IContactList) => {
   }
 
   return (
-    <div className='contact_list_area' onScroll={props.onScroll}>
+    <div className={style.list_area} onScroll={props.onScroll}>
       {props?.data?.map((contact, index) => (
         <ContactItem
           contact={contact}

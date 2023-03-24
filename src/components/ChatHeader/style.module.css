@@ -1,25 +1,25 @@
-.chat_header_content {
+.content {
   display: flex;
   align-items: center;
   padding: 10px;
 }
-.chat_header_content .avatar {
+.avatar {
   width: 40px;
   height: 40px;
   background-color: aqua;
   border-radius: 50%;
   overflow: hidden;
 }
-.chat_header_content .desc_area {
+.desc_area {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
 }
-.chat_header_content .nickname {
+.nickname {
   font-size: 14px;
   color: #333;
 }
-.chat_header_content .sologan {
+.sologan {
   font-size: 12px;
   color: #999;
 }

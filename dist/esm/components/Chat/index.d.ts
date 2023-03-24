@@ -1,4 +1,3 @@
-import './style.css';
 import { IChatProps } from "../../types";
 declare function Chat(props: IChatProps): JSX.Element;
 declare namespace Chat {

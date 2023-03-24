@@ -1,4 +1,4 @@
-.msg_bubble.text_content {
+.text_content {
   background-color: #91ed61;
   color: #333;
   padding: 8px;
@@ -9,10 +9,10 @@
   font-size: 13px;
   letter-spacing: 2px;
 }
-.msg_bubble.arrow {
+.arrow {
   position: relative;
 }
-.msg_bubble.arrow::after {
+.arrow::after {
   content: '';
   position: absolute;
   width: 8px;
@@ -21,13 +21,13 @@
   transform: rotate(45deg);
   top: 8px;
 }
-.msg_bubble.arrow_left::after {
+.arrow_left::after {
   left: -4px;
 }
-.msg_bubble.arrow_right::after {
+.arrow_right::after {
   right: -4px;
 }
-.msg_bubble .img_content {
+.img_content {
   display: block;
   width: auto;
   max-width: 400px;

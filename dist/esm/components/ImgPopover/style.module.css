@@ -1,4 +1,4 @@
-.img_content {
+.content {
   width: 20px;
   height: 20px;
   background-image: url('../../image/pic_black.png');
@@ -6,10 +6,10 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.img_content:hover {
+.content:hover {
   background-image: url('../../image/pic_light.png');
   cursor: pointer;
 }
-.img_content > input {
+.content > input {
   display: none;
 }

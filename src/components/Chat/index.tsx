@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import style from './style.module.css'
 import ChatInput from '../ChatInput'
 import ChatRecordList from '../ChatRecordList'
 import ScrollWrapper from '../ScrollWrapper'
@@ -31,7 +31,7 @@ export default function Chat(props: IChatProps) {
   const listHeight = props.style.height - textHeight - 60
 
   return (
-    <div className='chat_content' style={props.style}>
+    <div className={style.content} style={props.style}>
       <ChatHeader data={props.contact} />
       <WrappedChatRecordList
         {...props}

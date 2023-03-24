@@ -1,35 +1,35 @@
-.chat_tool_bar_content {
+.content {
   height: 30px;
   display: flex;
   align-items: center;
   padding: 0px 10px;
 }
-.chat_tool_bar_content .tool_icon {
-  height: 20px;
-  width: 20px;
+.tool_icon {
+  height: 30px;
+  width: 30px;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 10px;
 }
-.chat_tool_bar_content .tool_icon:hover {
+.tool_icon:hover {
   cursor: pointer;
 }
-.chat_tool_bar_content .emoji {
+.emoji {
   background-image: url('../../image/emoji_black.png');
 }
-.chat_tool_bar_content .emoji:hover {
+.emoji:hover {
   background-image: url('../../image/emoji_light.png');
 }
-.chat_tool_bar_content .file {
+.file {
   background-image: url('../../image/file_black.png');
 }
-.chat_tool_bar_content .file:hover {
+.file:hover {
   background-image: url('../../image/file_light.png');
 }
-.chat_tool_bar_content .pic {
+.pic {
   background-image: url('../../image/pic_black.png');
 }
-.chat_tool_bar_content .pic:hover {
+.pic:hover {
   background-image: url('../../image/pic_light.png');
 }

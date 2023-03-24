@@ -13,15 +13,12 @@ export default function DemoChat() {
         chatList={chatListData}
         onSend={(msg: any) => setChatListData([...chatListData, msg])}
         onEarlier={() => console.log('EarlierEarlier')}
-        onImage={() => {
-
-        }}
         style={{
           width: 600,
           height: 500,
           borderRadius: 5,
           border: '1px solid rgb(226, 226, 226)'
-        }}
+      }}
       />
     </DisplayWrapper>
   )

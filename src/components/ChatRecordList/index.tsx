@@ -1,14 +1,15 @@
 import React from 'react'
-import './style.css'
+import style from './style.module.css'
 import MsgItem from '../MsgItem'
+import cns from '../../utils/toClass'
 import { IChatRecordList } from '../../types'
 
 const ChatRecordList = (props: IChatRecordList) => {
   return (
-    <div className='chat_record_list_area'>
+    <div className={cns([style.list_area])}>
       <div>
-        <button className='load_more' onClick={props.onEarlier}>
-          加载更多···
+        <button className={style.load_more} onClick={props.onEarlier}>
+          Load more···
         </button>
       </div>
       {props.data.map((bubble) => (

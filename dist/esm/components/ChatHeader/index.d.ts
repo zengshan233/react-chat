@@ -1,5 +1,4 @@
 import { IContact } from '../../types';
-import './style.css';
 declare function ChatHeader(props: {
     data: IContact;
 }): JSX.Element;

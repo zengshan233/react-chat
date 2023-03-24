@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style.css";
+import style from "./style.module.css";
 import EmojiPopover from "../EmojiPopover";
 import ImgPopover from "../ImgPopover";
 export default function ChatToolBar(_ref) {
@@ -8,7 +8,7 @@ export default function ChatToolBar(_ref) {
     onEmojiSelect = _ref.onEmojiSelect,
     onImage = _ref.onImage;
   return /*#__PURE__*/React.createElement("div", {
-    className: "chat_tool_bar_content"
+    className: style.content
   }, typeof onEmojiSelect === 'function' && /*#__PURE__*/React.createElement(EmojiPopover, {
     onSelect: onEmojiSelect
   }), typeof onImage === 'function' && /*#__PURE__*/React.createElement(ImgPopover, {
