@@ -1,9 +1,9 @@
 @import '../../style/common.css';
 
 .wrapper_content {
-  flex: 1;
   position: relative;
   display: flex;
+  flex: 1;
   box-sizing: border-box;
   border-top: solid 1px rgb(226, 226, 226);
   border-bottom: solid 1px rgb(226, 226, 226);
@@ -33,10 +33,12 @@
 .scroll_thumb {
   display: block;
   width: 100%;
-  background-color: #aaa;
+  background-color: rgba(0, 0, 0, 0.08);
   border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
 }
 .scroll_thumb:hover {
+  background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .shadow_top {
@@ -48,4 +50,10 @@
 .shadow_vertical {
   box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.2),
     inset 0px -5px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .scroll_thumb {
+      display: none;
+  }
 }

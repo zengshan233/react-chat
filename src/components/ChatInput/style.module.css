@@ -5,11 +5,13 @@
   width: 100%;
   min-height: 80px;
   padding: 0 30px;
+  background: #fff;
   /* box-shadow: 0px -5px 10px -5px rgba(0, 0, 0, 0.2); */
 }
 .input_area {
   flex: 1;
   padding: 10px;
+  padding-top: 20px;
   padding-left: 0;
   font-size: 13px;
   letter-spacing: 2px;
@@ -21,19 +23,19 @@
   color: #999;
 }
 .but_area {
+  position: relative;
   width: 44px;
   height: 44px;
-  border-radius: 10px;
   background: #98b0b2;
-  position: relative;
+  border-radius: 10px;
   cursor: pointer;
 }
-.but_area>svg{
-  width: 28px;
+.but_area > svg {
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  left: 50%;
+  width: 28px;
+  transform: translate(-50%, -50%);
 }
 .but {
   color: white;
@@ -47,4 +49,23 @@
 }
 .but:disabled {
   background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .content {
+    min-height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .input_area {
+    padding-top: 25px;
+  }
+  .but_area {
+    width: 32px;
+    height: 32px;
+  }
+
+  .but_area > svg {
+    width: 20px;
+  }
 }

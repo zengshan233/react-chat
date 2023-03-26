@@ -6,7 +6,7 @@
 .avatar {
   width: 40px;
   height: 40px;
-  background-color: aqua;
+  background-color: transparent;
   border-radius: 50%;
   overflow: hidden;
 }
