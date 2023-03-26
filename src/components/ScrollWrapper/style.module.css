@@ -5,6 +5,7 @@
   display: flex;
   flex: 1;
   box-sizing: border-box;
+  overflow: hidden;
   border-top: solid 1px rgb(226, 226, 226);
   border-bottom: solid 1px rgb(226, 226, 226);
 }
@@ -53,7 +54,10 @@
 }
 
 @media (max-width: 768px) {
-    .scroll_thumb {
-      display: none;
+  .scroll_bar_block {
+    display: none;
+  }
+  .scroll_thumb {
+    display: none;
   }
 }
