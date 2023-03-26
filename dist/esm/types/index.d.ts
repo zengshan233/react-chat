@@ -6,7 +6,11 @@ export interface IChatProps {
   chatList: any[]
   onImage?: Function
   showLoadMore?: boolean
+  style?: ChatStyle
   onEarlier?: MouseEventHandler
+}
+export interface ChatStyle {
+  chatBg?: any
 }
 export interface IContact {
   id?: number | string
@@ -27,7 +31,7 @@ export interface IChatRecordList {
   onEarlier?: MouseEventHandler
   data: any[]
   me: IContact
-  style?: CSSProperties
+  style?: ChatStyle
   showLoadMore?: boolean
 }
 export interface IChatToolBar {

@@ -19,10 +19,20 @@ import style from './style.module.css'
 import MsgItem from '../MsgItem'
 import cns from '../../utils/toClass'
 var ChatRecordList = function ChatRecordList(props) {
+  var _props$style$chatBg, _props$style
   return /*#__PURE__*/ React.createElement(
     'div',
     {
       className: cns([style.list_area]),
+      style: {
+        background:
+          (_props$style$chatBg =
+            (_props$style = props.style) === null || _props$style === void 0
+              ? void 0
+              : _props$style.chatBg) !== null && _props$style$chatBg !== void 0
+            ? _props$style$chatBg
+            : 'transparent',
+      },
     },
     props.showLoadMore &&
       /*#__PURE__*/ React.createElement(

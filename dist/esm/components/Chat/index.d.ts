@@ -6,6 +6,9 @@ declare namespace Chat {
     me: {}
     chatList: never[]
     showLoadMore: boolean
+    style: {
+      chatBg: string
+    }
     onSend: (msg: any) => void
   }
 }

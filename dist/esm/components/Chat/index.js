@@ -26,6 +26,9 @@ var defaultChatProps = {
   me: {},
   chatList: [],
   showLoadMore: false,
+  style: {
+    chatBg: '#F5F3F0',
+  },
   onSend: function onSend(msg) {
     return console.warn('传入onSend属性，用于接收输入框内容', msg)
   },
