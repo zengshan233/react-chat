@@ -55,7 +55,7 @@
 
 @media (max-width: 768px) {
   .wrapper_content {
-    padding-bottom: 70px;
+    padding-bottom: 80px;
   }
   .scroll_bar_block {
     display: none;
