@@ -5,7 +5,7 @@ import dayjs from 'dayjs'
 import ChatToolBar from '../ChatToolsBar'
 import { IChatInput, IMessage } from '../../types'
 
-export default function ChatInput({ me, onSend = () => {}, onImage, height }: IChatInput) {
+export default function ChatInput({ me, onSend = () => {}, onImage }: IChatInput) {
   const [text, setText] = useState('')
   const [isShift, setIsShift] = useState(false)
   const [isAllowSend, setIsAllowSend] = useState(false)

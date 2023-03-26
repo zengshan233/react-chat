@@ -7,16 +7,18 @@ import { IChatRecordList } from '../../types'
 const ChatRecordList = (props: IChatRecordList) => {
   return (
     <div className={cns([style.list_area])}>
-      <div>
-        <button className={style.load_more} onClick={props.onEarlier}>
-          Load more···
-        </button>
-      </div>
+      {props.showLoadMore && (
+        <div>
+          <button className={style.load_more} onClick={props.onEarlier}>
+            Load more···
+          </button>
+        </div>
+      )}
       {props.data.map((bubble) => (
         <MsgItem {...props} data={bubble} key={bubble._id} />
-        ))}
+      ))}
     </div>
-    )
+  )
 }
 
 export default ChatRecordList

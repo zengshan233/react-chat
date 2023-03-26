@@ -1,12 +1,12 @@
-import { CSSProperties, MouseEventHandler, ReactNode, UIEventHandler } from "react"
+import { CSSProperties, MouseEventHandler, ReactNode, UIEventHandler } from 'react'
 
 export interface IChatProps {
   onSend: Function
   me: IContact
   contact: IContact
-  style: CSSProperties & { height: number }
   chatList: any[]
   onImage?: Function
+  showLoadMore?: boolean
   onEarlier?: MouseEventHandler
 }
 
@@ -32,6 +32,7 @@ export interface IChatRecordList {
   data: any[]
   me: IContact
   style?: CSSProperties
+  showLoadMore?: boolean
 }
 
 export interface IChatToolBar {
@@ -75,7 +76,6 @@ export interface IChatInput {
   me: IContact
   onSend: Function
   onImage?: Function
-  height: number
 }
 
 export type IMessageType = 'text' | 'image'
