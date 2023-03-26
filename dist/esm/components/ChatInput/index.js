@@ -70,8 +70,7 @@ export default function ChatInput(_ref) {
   var me = _ref.me,
     _ref$onSend = _ref.onSend,
     onSend = _ref$onSend === void 0 ? function () {} : _ref$onSend,
-    onImage = _ref.onImage,
-    height = _ref.height
+    onImage = _ref.onImage
   var _useState = useState(''),
     _useState2 = _slicedToArray(_useState, 2),
     text = _useState2[0],

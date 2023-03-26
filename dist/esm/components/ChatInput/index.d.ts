@@ -1,2 +1,2 @@
-import { IChatInput } from '../../types';
-export default function ChatInput({ me, onSend, onImage, height }: IChatInput): JSX.Element;
+import { IChatInput } from '../../types'
+export default function ChatInput({ me, onSend, onImage }: IChatInput): JSX.Element

@@ -1,15 +1,12 @@
-import { IChatProps } from "../../types";
-declare function Chat(props: IChatProps): JSX.Element;
+import { IChatProps } from '../../types'
+declare function Chat(props: IChatProps): JSX.Element
 declare namespace Chat {
-    var defaultProps: {
-        style: {
-            width: number;
-            height: number;
-        };
-        contact: {};
-        me: {};
-        chatList: never[];
-        onSend: (msg: any) => void;
-    };
+  var defaultProps: {
+    contact: {}
+    me: {}
+    chatList: never[]
+    showLoadMore: boolean
+    onSend: (msg: any) => void
+  }
 }
-export default Chat;
+export default Chat
