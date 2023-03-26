@@ -22,11 +22,6 @@ export default () => {
         chatList={chatListData}
         onSend={(msg: any) => setChatListData([...chatListData, msg])}
         onEarlier={() => console.log('EarlierEarlier')}
-        style={{
-          width: 600,
-          height: 500,
-          borderRadius: 5,
-        }}
       />
     </div>
   )

@@ -6,7 +6,10 @@ import { IChatRecordList } from '../../types'
 
 const ChatRecordList = (props: IChatRecordList) => {
   return (
-    <div className={cns([style.list_area])}>
+    <div
+      className={cns([style.list_area])}
+      style={{ background: props.style?.chatBg ?? 'transparent' }}
+    >
       {props.showLoadMore && (
         <div>
           <button className={style.load_more} onClick={props.onEarlier}>
