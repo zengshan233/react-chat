@@ -54,6 +54,9 @@
 }
 
 @media (max-width: 768px) {
+  .wrapper_content {
+    padding-bottom: 70px;
+  }
   .scroll_bar_block {
     display: none;
   }
